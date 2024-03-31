@@ -65,7 +65,7 @@ namespace SistemaVenta.Utility
                 )
                  .ForMember(destino =>
                 destino.Precio,
-                opt => opt.MapFrom(origen => Convert.ToString(origen.Precio.Value, new CultureInfo("es-COP")))
+                opt => opt.MapFrom(origen => Convert.ToString(origen.Precio.Value, new CultureInfo("es-CO")))
                 )
                  .ForMember(destino =>
                     destino.EsActivo,
@@ -79,7 +79,7 @@ namespace SistemaVenta.Utility
             )
              .ForMember(destino =>
             destino.Precio,
-            opt => opt.MapFrom(origen => Convert.ToDecimal(origen.Precio, new CultureInfo("es-COP")))
+            opt => opt.MapFrom(origen => Convert.ToDecimal(origen.Precio, new CultureInfo("es-CO")))
             )
              .ForMember(destino =>
                 destino.EsActivo,
@@ -92,7 +92,7 @@ namespace SistemaVenta.Utility
             CreateMap<Venta, VentaDTO>()
                 .ForMember(destino =>
                 destino.TotalTexto,
-                opt => opt.MapFrom(origen => Convert.ToString(origen.Total.Value, new CultureInfo("es-COP")))
+                opt => opt.MapFrom(origen => Convert.ToString(origen.Total.Value, new CultureInfo("es-CO")))
                 )
                 .ForMember(destino =>
                 destino.FechaRegistro,
@@ -102,7 +102,7 @@ namespace SistemaVenta.Utility
             CreateMap<VentaDTO, Venta>()
                   .ForMember(destino =>
                 destino.Total,
-                opt => opt.MapFrom(origen => Convert.ToDecimal(origen.TotalTexto, new CultureInfo("es-COP")))
+                opt => opt.MapFrom(origen => Convert.ToDecimal(origen.TotalTexto, new CultureInfo("es-CO")))
                 );
             #endregion Venta
 
@@ -114,21 +114,21 @@ namespace SistemaVenta.Utility
                     )
                 .ForMember(destino =>
                     destino.PrecioTexto,
-                    opt => opt.MapFrom(origen => Convert.ToString(origen.Precio.Value, new CultureInfo("es-COP")))
+                    opt => opt.MapFrom(origen => Convert.ToString(origen.Precio.Value, new CultureInfo("es-CO")))
                 )
                 .ForMember(destino =>
                     destino.PrecioTexto,
-                    opt => opt.MapFrom(origen => Convert.ToString(origen.Total.Value, new CultureInfo("es-COP")))
+                    opt => opt.MapFrom(origen => Convert.ToString(origen.Total.Value, new CultureInfo("es-CO")))
                 );
 
             CreateMap<DetalleVentaDTO, DetalleVenta>()
                .ForMember(destino =>
                 destino.Precio,
-                opt => opt.MapFrom(origen => Convert.ToString(origen.PrecioTexto, new CultureInfo("es-COP")))
+                opt => opt.MapFrom(origen => Convert.ToString(origen.PrecioTexto, new CultureInfo("es-CO")))
                 )
                 .ForMember(destino =>
                 destino.Precio,
-                opt => opt.MapFrom(origen => Convert.ToString(origen.TotalTexto, new CultureInfo("es-COP")))
+                opt => opt.MapFrom(origen => Convert.ToString(origen.TotalTexto, new CultureInfo("es-CO")))
                 );
 
             #endregion DetalleVneta
@@ -149,7 +149,7 @@ namespace SistemaVenta.Utility
                 )
                .ForMember(destino =>
                 destino.TotalVenta,
-                opt => opt.MapFrom(origen => Convert.ToString(origen.IdVentaNavigation.Total.Value, new CultureInfo("es-COP")))
+                opt => opt.MapFrom(origen => Convert.ToString(origen.IdVentaNavigation.Total.Value, new CultureInfo("es-CO")))
                 )
                .ForMember(destino =>
                 destino.Producto,
@@ -157,11 +157,11 @@ namespace SistemaVenta.Utility
                 )
                 .ForMember(destino =>
                 destino.Precio,
-                opt => opt.MapFrom(origen => Convert.ToString(origen.Precio.Value, new CultureInfo("es-COP")))
+                opt => opt.MapFrom(origen => Convert.ToString(origen.Precio.Value, new CultureInfo("es-CO")))
                 )
                 .ForMember(destino =>
                 destino.Total,
-                opt => opt.MapFrom(origen => Convert.ToString(origen.Total.Value, new CultureInfo("es-COP")))
+                opt => opt.MapFrom(origen => Convert.ToString(origen.Total.Value, new CultureInfo("es-CO")))
                 );
 
             #endregion Reporte

@@ -38,7 +38,7 @@ namespace SistemaVenta.BLL.Servicios
             }
             catch (Exception ex)
             {
-                throw;
+                throw new Exception("Se ha producido un error al procesar: " + ex.Message);
             }
         }
 
