@@ -102,7 +102,7 @@ namespace SistemaVenta.Utility
             CreateMap<VentaDTO, Venta>()
                   .ForMember(destino =>
                 destino.Total,
-                opt => opt.MapFrom(origen => Convert.ToDecimal(origen.TotalTexto, new CultureInfo("es-CO")))
+                opt => opt.MapFrom(origen => Convert.ToString(origen.TotalTexto, new CultureInfo("es-CO")))
                 );
             #endregion Venta
 
@@ -127,7 +127,7 @@ namespace SistemaVenta.Utility
                 opt => opt.MapFrom(origen => Convert.ToString(origen.PrecioTexto, new CultureInfo("es-CO")))
                 )
                 .ForMember(destino =>
-                destino.Precio,
+                destino.Total,
                 opt => opt.MapFrom(origen => Convert.ToString(origen.TotalTexto, new CultureInfo("es-CO")))
                 );
 

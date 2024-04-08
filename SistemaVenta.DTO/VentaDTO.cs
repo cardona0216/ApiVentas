@@ -8,6 +8,11 @@ namespace SistemaVenta.DTO
 {
     public class VentaDTO
     {
+        public VentaDTO()
+        {
+            DetalleVenta = new List<DetalleVentaDTO>(); // Inicializar la colección en el constructor
+        }
+
         public int IdVenta { get; set; }
 
         public string? NumeroDocumento { get; set; }
@@ -17,6 +22,7 @@ namespace SistemaVenta.DTO
         public string? TotalTexto { get; set; }
 
         public string? FechaRegistro { get; set; }
-        public virtual ICollection<DetalleVentaDTO> DetalleVenta { get; set; } 
+        public virtual ICollection<DetalleVentaDTO> DetalleVenta { get; set; }
     }
+
 }
